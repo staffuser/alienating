@@ -8,46 +8,121 @@
                                  maximum-scale=1.0, user-scalable=yes">
     <meta name="ALIENATING" content="#fff">
     <title>ALIENATING</title>
+		<style>
+      .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none; /* Safari */
+           -khtml-user-select: none; /* Konqueror HTML */
+             -moz-user-select: none; /* Old versions of Firefox */
+              -ms-user-select: none; /* Internet Explorer/Edge */
+                  user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+      }
+    </style>
   </head>
   <body id="typing" class="neterror" style="background-color: rgb(140, 140, 140);left: 1em; padding: .5em; top: 1em; opacity: .8; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%"
 
     jstcache="0" contenteditable="false">
-	  
-<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'>
-    new Crate({
-        server: '1070409167573102722', // dcap beta
-        channel: '1071099302321066054' // #🥨
-    })
-</script>
-	  
-<link type="image/x-icon" rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
-<link type="image/png" sizes="16x16" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
-<link type="image/png" sizes="32x32" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
-<link type="image/png" sizes="96x96" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
-<link type="image/png" sizes="120x120" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <div class="noselect">
+    <div id="mydiv">
+      <!-- Включите заголовок DIV с тем же именем, что и перетаскиваемый DIV, а затем "header" -->
+      <div id="mydivheader">moving window GIT-HUB!</div>
+      <div class="github-widget" data-username="staffuser"></div>
+			<script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script>
+      <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+    </div>
     
-<!-- для Facebook и ВКонтакте (протокол Open Graph) -->
-<meta property="og:title" content="ALIENATING" />
-<meta property="og:description" content="DCAP is committed to providing clean partnership. 
-You can join the partnership right now!" />
-<meta property="og:image" content="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif" />
-<meta property="og:url" content="https://staffuser.github.io/chat/" />
-<meta property="og:site_name" content="ALIENATING" />
-<!-- для Twitter -->
-<meta name="twitter:site" content="ALIENATING" />
-<meta name="twitter:title" content="DCAP is committed to providing clean partnership. 
-You can join the partnership right now!" />
-<meta name="twitter:description" content="DCAP is committed to providing clean partnership. 
-You can join the partnership right now!" />
-    
-    <ul class="social-icons">
-      <li><a class="social-icon-twitter" href="https://www.twitch.tv/pro13_0"
+ <style>
+#mydiv {
+  position: absolute;
+  z-index: 60;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
 
-          title="twitch" target="_blank" rel="noopener"></a><br>
-      </li>
-      <li><a class="social-icon-fb" href="https://discord.com/invite/UDScSSSups" title="discord"
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+    </style>
+      <script>
+// Сделайте элемент DIV перетаскиваемым:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // если присутствует, заголовок - это место, откуда вы перемещаете DIV:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // в противном случае переместите DIV из любого места внутри DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // получить положение курсора мыши при запуске:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // вызов функции при каждом перемещении курсора:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // вычислить новую позицию курсора:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // установите новое положение элемента:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // остановка перемещения при отпускании кнопки мыши:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+  
+    </script> 
+    
+    
+    <link type="image/x-icon" rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <link type="image/png" sizes="16x16" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <link type="image/png" sizes="32x32" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <link type="image/png" sizes="96x96" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <link type="image/png" sizes="120x120" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <!-- для Facebook и ВКонтакте (протокол Open Graph) -->
+    <meta property="og:title" content="ALIENATING">
+    <meta property="og:description" content="DCAP is committed to providing clean partnership. 
+You can join the partnership right now!">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <meta property="og:url" content="https://staffuser.github.io/chat/">
+    <meta property="og:site_name" content="ALIENATING">
+    <!-- для Twitter -->
+    <meta name="twitter:site" content="ALIENATING">
+    <meta name="twitter:title" content="DCAP is committed to providing clean partnership. 
+You can join the partnership right now!">
+    <meta name="twitter:description" content="DCAP is committed to providing clean partnership. 
+You can join the partnership right now!">
+    <ul class="social-icons">
+      <li><a class="social-icon-twitter" href="https://www.twitch.tv/pro13_0" title="twitch"
 
           target="_blank" rel="noopener"></a><br>
+      </li>
+      <li><a class="social-icon-fb" href="https://discord.com/invite/UDScSSSups"
+
+          title="discord" target="_blank" rel="noopener"></a><br>
       </li>
       <li><a class="social-icon-vk" href="https://vk.com/delet_user0" title="VK"
 
@@ -57,7 +132,6 @@ You can join the partnership right now!" />
 
           title="telegram" target="_blank" rel="noopener"></a><br>
       </li>
-
     </ul>
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +143,12 @@ You can join the partnership right now!" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
     <link rel="stylesheet" href="style.css">
-    <style>/* Copyright 2017 The Chromium Authors. All rights reserved.
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+    <!-- VK Widget -->
+    <div id="vk_community_messages"></div>
+    <script type="text/javascript">
+VK.Widgets.CommunityMessages("vk_community_messages", 203843455, {expanded: "1",widgetPosition: "right",tooltipButtonText: "Hi, if you have any questions, leave a note or comment!"});
+</script> <style>/* Copyright 2017 The Chromium Authors. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file. */
 
@@ -44926,15 +45005,13 @@ Runner.spriteDefinitionByType = {
                         <ul jsvalues=".className:suggestionsSummaryList.length == 1 ? 'single-suggestion' : ''"
 
                           jstcache="19" class="">
-<button
-                            id="bg" style="background-color: rgb(140, 140, 140);left: 1em; padding: .5em; top: 1em; opacity: .8; display: inline-block; position: fixed; height: 3.5em; width: 3.5em; border-radius: 50%; font-size: .8em; z-index: 100; margin: 0; border: 0; outline: 0; cursor: pointer;"><svg
+                          <button id="bg" style="background-color: rgb(140, 140, 140);left: 1em; padding: .5em; top: 1em; opacity: .8; display: inline-block; position: fixed; height: 3.5em; width: 3.5em; border-radius: 50%; font-size: .8em; z-index: 100; margin: 0; border: 0; outline: 0; cursor: pointer;"><svg
 
                               style="height: 2.5em;" viewBox="0 0 13.31 23" version="1"><path
 
                                 fill="#fff" d="M8.86 18.43c.16 0 .28-.14.28-.3v-.3c0-.18-.12-.32-.28-.32h-4.4c-.16 0-.28.18-.28.35v.3c0 .17.12.3.28.3zm0 1.34c.16 0 .28-.14.28-.3v-.3c0-.18-.12-.32-.28-.32h-4.4c-.16 0-.28.14-.28.3v.3c0 .18.12.32.28.32zm0 1.37c.16 0 .28-.14.28-.32v-.3c0-.16-.12-.3-.28-.3h-4.4c-.16 0-.28.14-.28.3v.3c0 .18.12.32.28.32zm-.76.46c-.25.53-.8.9-1.44.9-.63 0-1.2-.38-1.46-.9h2.9z"></path><path
 
                                 id="clrLamp" fill="#222" d="M6.66.5C3.26.5.5 3.26.5 6.66c0 1.12.3 2.16.82 3.07 1.5 2.72 1.9 4.25 2.16 5.73.2 1.24.5 1.53 1.43 1.53h3.54c.95 0 1.23-.3 1.44-1.57.25-1.48.65-3 2.16-5.73.5-.9.82-1.94.82-3.06C12.86 3.27 10.16.5 6.7.5z"></path></svg></button>
-
                           <script>
   const lamp = document.querySelector('#clrLamp');
   const btn = document.querySelector('#bg');
@@ -44948,6 +45025,7 @@ Runner.spriteDefinitionByType = {
 </script> <div>
                             <form id="console-form"> <input id="command" type="text">
                               <input value="Run Command" type="submit"> <button
+
                                 id="clear" type="button">Clear</button> </form>
                             <hr>
                             <pre id="console"></pre>
@@ -45009,7 +45087,7 @@ document.getElementById('current_date_time_block').innerHTML = date_time();
 
                             jstcache="21" jsinstance="0"><span style="color: rgba(0, 0, 153, 0.26);">[*]<a
 
-                                href="https://discord.com/api/oauth2/authorize?client_id=1064575261103902720&permissions=553513977937&scope=applications.commands%20bot"
+                                href="https://discord.com/api/oauth2/authorize?client_id=1064575261103902720&amp;permissions=553513977937&amp;scope=applications.commands%20bot"
 
                                 target="_blank">Installation Client</a>.</span></li>
                           <li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary"
@@ -45028,7 +45106,7 @@ document.getElementById('current_date_time_block').innerHTML = date_time();
 
                             jstcache="21" jsinstance="0"><span style="color: rgba(0, 0, 153, 0.26);">[*]<a
 
-                                href="https://discord.com/api/oauth2/authorize?client_id=1020080505384873984&permissions=4393749445879&scope=applications.commands%20bot"
+                                href="https://discord.com/api/oauth2/authorize?client_id=1020080505384873984&amp;permissions=4393749445879&amp;scope=applications.commands%20bot"
 
                                 target="_blank">Add Save</a>.</span></li>
                         </ul>
@@ -45080,14 +45158,14 @@ document.getElementById('current_date_time_block').innerHTML = date_time();
                   <p><span style="color: #5b39e4;">NICK:</span><span style="color: #332ae4;">
                       <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
                       <span class="username-3JLfHz userTagUsernameBase-3Nfr5j" style="margin: 0px; padding: 0px; border: 0px none; font-weight: 500; font-style: normal; font-family: &quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; outline: 0px none; --font-code:Consolas,&quot;Andale Mono WT&quot;,&quot;Andale Mono&quot;,&quot;Lucida Console&quot;,&quot;Lucida Sans Typewriter&quot;,&quot;DejaVu Sans Mono&quot;,&quot;Bitstream Vera Sans Mono&quot;,&quot;Liberation Mono&quot;,&quot;Nimbus Mono L&quot;,Monaco,&quot;Courier New&quot;,Courier,monospace; --font-primary:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; --font-display:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; --font-headline:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; flex: 0 1 auto; white-space: normal; text-overflow: unset; overflow: auto; -moz-box-flex: 0; display: inline; word-break: break-all; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #18191c; text-decoration-style: initial; text-decoration-color: initial;">𝖆✟ᖴᏬᏒᏒᎩ
-                        𝕯𝖗𝖚𝖓𝖐𝖊𝖗 ✞˞˞ٴٴB#0733</span>
-                    <span></span><button class="sharer button" data-sharer="vk"
+                        𝕯𝖗𝖚𝖓𝖐𝖊𝖗 ✞˞˞ٴٴB#0733</span> <span></span><button
 
-                      data-caption="Sharer.js is the ultimate sharer js lib" data-title="https://staffuser.github.io/chat/"
+                        class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib"
 
-                      data-url="https://staffuser.github.io/chat/">Share on VK</button>
-                    <span style="color: #5b39e4;"></span> <span style="color: #5b39e4;"></span>
-                  </p>
+                        data-title="https://staffuser.github.io/chat/" data-url="https://staffuser.github.io/chat/">Share
+                        on VK</button> <span style="color: #5b39e4;"></span> <span
+
+                        style="color: #5b39e4;"></span> </span></p>
                   <script>
 const dropZone = document.getElementById('drop-zone');
 const content = document.getElementById('content');
@@ -45758,7 +45836,6 @@ div.hero {
   background-image: url("telegram.gif");
 }
         
-        
 </style> <script id="cmd-css">
     console.log('Well, do you need to be here? theres nothing here!'); 
     console.log('%cCompletion of Work%c %c0%c.5.6','color:red;','font-size:16px;color:orange;','background:blue;color:red;','font:normal;color:normal;background:blue;color:red;');
@@ -45766,6 +45843,7 @@ div.hero {
     console.log('body as Object: %O',document.getElementsByTagName('body')[0]);
     console.group('Error');
     </script> </div>
+    </div>
     </div>
   </body>
 </html>
