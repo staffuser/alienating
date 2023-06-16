@@ -23,6 +23,7 @@
   <body id="typing" class="neterror" style="background-color: rgb(140, 140, 140);left: 1em; padding: .5em; top: 1em; opacity: .8; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%"
 
     jstcache="0" contenteditable="true">
+    <section>
     <div class="noselect">
     <div class="container">
     <div id="mydiv">
@@ -32,7 +33,7 @@
 			<script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script>
       </div>
       <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>    
- <style>
+ <style>	 
 #mydiv {
   position: absolute;
   z-index: 60;
@@ -45539,6 +45540,7 @@ class LoadTimeData {
           <script jstcache="0">const pageData = {"details":"Сведения","dinoGameA11yAriaLabel":"","dinoGameA11yDescription":"Игра Dino. Пиксельный динозаврик бежит по пустыне, уворачиваясь от кактусов и птеродактилей. Услышав звуковую подсказку, нажмите Пробел, чтобы перепрыгнуть препятствие.","dinoGameA11yGameOver":"Игра закончена. Ваш результат: $1.","dinoGameA11yHighScore":"Ваш лучший результат: $1.","dinoGameA11yJump":"Прыгайте!","dinoGameA11ySpeedToggle":"Запустить медленнее","dinoGameA11yStartGame":"https://discord.gg/WjGS2Q8h5G","errorCode":"ERR_INTERNET_DISCONNECTED","fontfamily":"'Segoe UI', Tahoma, sans-serif","fontsize":"75%","heading":{"hostName":"https://discord.gg/WjGS2Q8h5G","msg":"Нет подключения к Интернету"},"hideDetails":"Скрыть подробности","iconClass":"icon-offline","language":"ru","suggestionsDetails":[],"suggestionsSummaryList":[{"summary":"Проверьте сетевые кабели, модем и маршрутизатор."},{"summary":"Подключитесь к сети Wi-Fi ещё раз."}],"suggestionsSummaryListHeader":"Попробуйте сделать следующее:","summary":{"failedUrl":"https://www.google.com/search?q=google&oq=google&aqs=chrome..69i57j0i271l3.1882j0j1&sourceid=chrome&ie=UTF-8","hostName":"www.google.com","msg":"Нет подключения к Интернету"},"textdirection":"ltr","title":"www.google.com"};loadTimeData.data = pageData;var tp = document.getElementById('t');jstProcess(new JsEvalContext(pageData), t</script><span><span
 
               style="color: #778fe4;"></span> </span>
+</section>
           <style>
    body {
     background-image: url(STuT.gif); /* Путь к фоновому изображению */
@@ -45850,8 +45852,34 @@ div.hero {
 .social-icons .social-icon-telegram::before {
   background-image: url("telegram.gif");
 }
-        
-</style> <script id="cmd-css">
+
+section{
+    background: url(fon5.jpg) no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+section{
+    height:115vh;
+    width:115vW;
+    background: url(fon5.jpg) no-repeat;
+    background-position: center;
+    background-size:cover;
+    transition: all 300ms ease;
+}
+	
+</style>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+  $('section').mousemove(function(e){
+      let winWidth = window.innerWidth;
+  let winHeight = window.innerHeight;
+  let moveOnX = e.pageX / (winWidth / 5 );
+  let moveOnY = e.pageY / (winHeight / 5);
+  $(this).css('transform', 'translate(-' + moveOnX +'%, -' + moveOnY + '%)');
+  })
+</script>
+ <script id="cmd-css">
     console.log('Well, do you need to be here? theres nothing here!'); 
     console.log('%cCompletion of Work%c %c0%c.5.6','color:red;','font-size:16px;color:orange;','background:blue;color:red;','font:normal;color:normal;background:blue;color:red;');
     console.log('object: %O',{a:0,b:1,n:name});
